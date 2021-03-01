@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Form from "./components/Form";
+import ModalStart from "./components/ModalStart";
+import NavBar from "./components/NavBar";
+import TodoContent from "./components/TodoContent";
+import { TaskArray } from "./react-app-env";
+import { MyStateContext } from "./State";
 
-function App() {
+const taskExample: TaskArray = [
+  {
+    id: Math.random(),
+    title: "Example title",
+    desc:
+      "Description example for this example notes, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum purus diam. Fusce tempor justo eu tempor eleifend. Aenean quis elementum sem.",
+    done: true,
+  },
+];
+
+export interface AppProps {}
+
+const App: React.FunctionComponent<AppProps> = () => {
+  const [modalAdder, setModalAdder] = useState<boolean>(false);
+  const [tasks, setTasks] = useState<TaskArray>(taskExample);
+  const [modalStart, setModalStart] = useState<boolean>(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyStateContext.Provider
+      value={{
+        modalAdder,
+        setModalAdder,
+        tasks,
+        setTasks,
+        modalStart,
+        setModalStart,
+      }}
+    >
+      <NavBar />
+      <ModalStart />
+      <div className="content-container">
+        <Form />
+        <section className="tasks tasks-pending">
+          <TodoContent />
+        </section>
+      </div>
+    </MyStateContext.Provider>
   );
-}
+};
 
 export default App;
