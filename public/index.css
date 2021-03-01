@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+#logo {
+  color: white;
+  transform: rotate(10deg);
+  font-size: 3rem;
+}
+
+#logo:hover {
+  color: aliceblue;
+  transform: rotate(-10deg);
+  cursor: pointer;
+}
+
+.modal {
+  background-color: rgba(234, 234, 234, 0.8);
+  padding: 2rem;
+  position: fixed;
+  width: 25%;
+  height: 40%;
+  left: 35%;
+  top: 20%;
+  padding: 4rem 4rem 1rem;
+  text-align: center;
+  border: 5px dotted red;
+  border-radius: 2rem;
+}
+
+.modal-stats {
+  margin-bottom: 2rem;
+}
+
+.modal-stats > li {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  text-align: start;
+}
+
+.nav {
+  background-color: black;
+  color: white;
+  padding: 2rem 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.btn-del {
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.btn-del:hover {
+  cursor: pointer;
+}
+
+.single-task {
+  display: flex;
+  padding: 3rem;
+  background-color: rgba(197, 197, 197, 0.8);
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 4rem;
+}
+
+.done {
+  background-color: green;
+  color: white;
+}
+
+.pending {
+  background-color: tomato;
+  color: white;
+}
+
+.status {
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  border-radius: 1rem;
+  text-transform: lowercase;
+}
+
+.status:hover {
+  cursor: pointer;
+}
+
+.content-task {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 50%;
+}
+
+.tasks {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.form {
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: fixed;
+  display: none;
+  padding: 3rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35%;
+  height: 35%;
+  left: -2rem;
+  border-radius: 2rem;
+}
+
+.font-title {
+  font-family: "Bebas Neue", cursive;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+}
+
+.modal-subtitle {
+  font-size: 1.2rem;
+}
+
+.font-content {
+  font-family: "Quicksand", sans-serif;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.txt-st {
+  text-align: start;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+#btn-modal {
+  background-color: blue;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: white;
+}
+
+.add-task:hover {
+  padding: 0;
+  text-align: center;
+  color: tomato;
+}
+
+.status-container {
+  margin-top: 2rem;
+}
+
+.title-task {
+  font-size: 2rem;
+  margin-top: 1.3rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-no-tasks {
+  font-size: 2rem;
+}
+
+.font-lg {
+  font-size: 2rem;
+}
+
+.field {
+  outline: none;
+  padding: 1rem;
+  color: tomato;
+  font-size: 1rem;
+  color: grey;
+  border-radius: 2rem;
+}
+
+.field:focus {
+  border: 4px dotted tomato;
+  color: tomato;
+}
+
+.btn-form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.btn-form {
+  background-color: blue;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btn-form-cancel {
+  background-color: tomato;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.labeled {
+  text-decoration: line-through;
+}

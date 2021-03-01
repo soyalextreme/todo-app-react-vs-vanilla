@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300&display=swap" rel="stylesheet"/>
+    <title>Homework | Todo Task</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <nav class="nav">
+        <header>
+            <h1 id="logo" class="font-title">Todo List! ✏</h1>
+        </header>
+
+        <ul>
+            <li id="adder"class="font-content font-bold cursor-pointer add-task">Add a task +</li>
+        </ul>
+    </nav>
+
+    <div class="modal-container">
+        <section class="modal" id="pop-modal">
+            <h2 class="font-title modal-title">Bienvenido! 👋</h2>
+            <br/>
+            <p class="font-content font-bold modal-subtitle"> Funcionalidades:</p>
+            <br/>
+            <ul class="font-content modal-stats">
+                <li>🔺 Poder crear tareas.</li>
+                <li>🔺 Tareas que tengan un status.</li>
+                <li>🔺 Eliminar tareas.</li>
+            </ul>
+            <br/>
+            <a href="#" class="font-content font-bold" id="btn-modal">Continuar</a>
+        </section>
+    </div>
+
+    <div class="content-container">
+        <section class="form">
+            <label class="font-title font-lg">Titulo:</label>
+            <input class="font-content field" id="title-field"type="text" placeholder="Titulo a la tarea."/>
+            <label class="font-title font-lg">Descripcion:</label>
+            <input class="font-content field"id="desc-field" type="text" placeholder="Descripcion para la tarea."/>
+            <div class="btn-form-container">
+                <a class="btn-form font-content font-bold">Agregar</a>
+                <a class="btn-form-cancel font-content font-bold" id="close-modal-form">Cancelar</a>
+            </div>
+        </section>
+        <section class="tasks tasks-pending">
+            <!-- here it will be inserted every task -->
+
+
+        </section>
+
+    </div>
+
+    
+    
+
+
+
+    
+    <script src="../index.js"></script>
+</body>
+</html>
